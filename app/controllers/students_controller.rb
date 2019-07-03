@@ -1,6 +1,4 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: :show
-
   def index
     @students = Student.all
   end
@@ -15,6 +13,9 @@ class StudentsController < ApplicationController
     @student.save
     redirect_to student_path(@student)
   end
+
+  before_action :set_student, only: :show
+
 
   private
 
