@@ -24,7 +24,7 @@ describe 'Show page' do
   end
 
   it 'renders properly' do
-    visit student_path(@student)
+    visit student_path(@students)
     expect(page.status_code).to eq(200)
   end
 
